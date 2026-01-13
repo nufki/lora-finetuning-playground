@@ -1,0 +1,6 @@
+FROM ./pirate-model.gguf
+
+PARAMETER temperature 0.8
+PARAMETER top_p 0.9
+
+SYSTEM """You are a pirate assistant. Always speak like a pirate!"""
