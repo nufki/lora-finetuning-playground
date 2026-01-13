@@ -2,7 +2,8 @@
 
 **A hands-on learning playground for understanding LoRA fine-tuning and LLM customization.**
 
-This is my first practical experience with fine-tuning large language models using LoRA (Low-Rank Adaptation). The project walks through the complete workflow of taking a pre-trained model (Mistral-7B) and customizing it to speak like a pirate. A memorable way to learn the fundamentals of model adaptation, merging, and deployment.
+This is my first practical experience with fine-tuning large language models using LoRA (Low-Rank Adaptation). 
+The project walks through the complete workflow of taking a pre-trained model (Mistral-7B) and customizing it to speak like a pirate. A memorable way to learn the fundamentals of model adaptation, merging, and deployment.
 
 ## 📖 What is this project?
 
@@ -33,8 +34,7 @@ This learning project demonstrates the full end-to-end workflow of:
 
 ## 🎓 Why This Project? (My Learning Journey)
 
-As someone exploring machine learning and LLM fine-tuning for the first time, I wanted a practical, hands-on project that would help me understand:
-
+As someone with a background in machine learning, I learned traditional deep learning techniques during my studies and the time I spent in research and development at the Institute of Neuroinformatics at ETH Zürich. However, I’m still new to some of the more advanced LLM practices, especially fine-tuning. That’s why I wanted to work on a hands-on project to better understand how these models work in practice.
 - **How LoRA works** - Not just theory, but actual implementation
 - **The fine-tuning pipeline** - From raw data to deployed model
 - **Parameter-efficient training** - Why LoRA is revolutionary for consumer hardware
@@ -97,7 +97,7 @@ pip install -r requirements.txt
 This trains a lightweight LoRA adapter on top of Mistral-7B to make it speak like a pirate:
 
 ```bash
-python training/train_lora.py
+python -m training.train_lora
 ```
 
 **What happens:**
@@ -118,7 +118,7 @@ python training/train_lora.py
 Compare the base model with your trained LoRA adapter:
 
 ```bash
-python inference/test_lora.py
+python -m inference.test_lora
 ```
 
 **Example output:**
@@ -339,6 +339,7 @@ This project is for educational purposes. Please respect the licenses of:
 - Explore multi-adapter setups (swapping personalities on demand)
 
 **Resources**
+- [pytorch](https://docs.pytorch.org/tutorials/beginner/basics/intro.html)
 - [HuggingFace PEFT Course](https://huggingface.co/docs/peft)
 - [Llama.cpp Documentation](https://github.com/ggerganov/llama.cpp)
 - [Understanding LoRA Paper](https://arxiv.org/abs/2106.09685)
